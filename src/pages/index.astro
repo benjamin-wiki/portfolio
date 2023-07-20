@@ -73,28 +73,28 @@ const projects: Array<{ title: string; desc: string; href: string; image: string
 	{
 		title: "PocketDoro",
 		desc: "An animated and interactive pomodoro timer app. Users will be able to manage their avatars energy levels, track their time spent studying and customise their avatar and room.",
-		href: "",
+		href: "https://pocketdoro.pushed.nz",
 		image: "/pocketdoro-room.png",
 		techUsed: "TypeScript, React, Tailwind CSS"
 	},
   {
 		title: "AI Terminal",
 		desc: "A webbased terminal that uses AI to answer questions about myself.",
-		href: "",
+		href: "https://github.com/benjamin-wiki/ai-terminal",
 		image: "/ai-terminal.png",
 		techUsed: "TypeScript, React, CSS, OpenAI"
 	},
   {
 		title: "Recipe Database",
 		desc: "A backend CRUD database that with user sign-up and login. Users can create, read, update and delete recipes.",
-		href: "",
+		href: "https://github.com/benjamin-wiki/food-lover",
 		image: "/food-db.png",
 		techUsed: "C#, .NET, SQLite"
 	},
   {
 		title: "Pet Stop",
 		desc: "A full stack React App where users can sign in add their pets and vote for others favourite pets!",
-		href: "",
+		href: "https://github.com/benjamin-wiki/petstop",
 		image: "/petstop.png",
 		techUsed: "React, Tailwind CSS, Node.js"
 	},
@@ -115,7 +115,7 @@ const projects: Array<{ title: string; desc: string; href: string; image: string
     <h2 class="title mb-4 text-xl">Projects</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       {
-        projects.map(({ title, desc, image, techUsed }) => (
+        projects.map(({ title, desc, image, href, techUsed }) => (
           <div class="border-2 border-gray-300 dark:border-gray-700 dark:bg-gray-800 overflow-hidden">
             <div class="aspect-w-16 aspect-h-9">
               <img 
@@ -126,10 +126,11 @@ const projects: Array<{ title: string; desc: string; href: string; image: string
             </div>
             <div class="p-4">
               <h3>
-                <a 
+                <a
+                  href={href} 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  class="font-bold text-lg text-black dark:text-white"
+                  class="font-bold text-lg text-black dark:text-white hover:underline"
                 >
                   {title}
                 </a>
