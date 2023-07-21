@@ -69,34 +69,38 @@ const cactusTech: Array<{ title: string; href: string }> = [
 ];
 
 
-const projects: Array<{ title: string; desc: string; href: string; image: string; techUsed: string }> = [
+const projects: Array<{ title: string; desc: string; href: string; image: string; techUsed: string; reflections: string }> = [
 	{
 		title: "PocketDoro",
-		desc: "An animated and interactive pomodoro timer app. Users will be able to manage their avatars energy levels, track their time spent studying and customise their avatar and room.",
+		desc: "An animated and interactive pomodoro timer app. Users will be able to manage their avatars energy levels, track their time spent studying and customise their avatar and room. ",
 		href: "https://pocketdoro.pushed.nz",
 		image: "/pocketdoro-room.png",
-		techUsed: "TypeScript, React, Tailwind CSS"
+		techUsed: "TypeScript, React, Tailwind CSS",
+    reflections: "We built this app to boost productivity, manage stress, and promote learning. I see the need to improve its responsiveness and add features like leaderboards and shops. The project taught me CSS, project management, and the workings of an agile environment."
 	},
   {
 		title: "AI Terminal",
 		desc: "A webbased terminal that uses AI to answer questions about myself.",
 		href: "https://github.com/benjamin-wiki/ai-terminal",
 		image: "/ai-terminal.png",
-		techUsed: "TypeScript, React, CSS, OpenAI"
+		techUsed: "TypeScript, React, CSS, OpenAI",
+    reflections: "Created to answer personal questions using AI, this app combines OpenAI's GPT-3.5, React, and CSS. I learned OpenAI API and React forms and FE development. Next steps include fine-tuning the model for more accurate responses."
 	},
   {
 		title: "Recipe Database",
 		desc: "A backend CRUD database that with user sign-up and login. Users can create, read, update and delete recipes.",
 		href: "https://github.com/benjamin-wiki/food-lover",
 		image: "/food-db.png",
-		techUsed: "C#, .NET, SQLite"
+		techUsed: "C#, .NET, SQLite",
+    reflections: "Driven by a desire to learn C#, I developed this CRUD database, gaining insights into user login, signup, and authentication processes. Looking ahead, I plan to enrich the project by introducing a frontend component."
 	},
   {
 		title: "Pet Stop",
 		desc: "A full stack React App where users can sign in add their pets and vote for others favourite pets!",
 		href: "https://github.com/benjamin-wiki/petstop",
 		image: "/petstop.png",
-		techUsed: "React, Tailwind CSS, Node.js"
+		techUsed: "React, Tailwind CSS, Node.js",
+    reflections: "Pet Stop, a project born in an agile environment, further honed my skills in React, Node.js, and Tailwind CSS. The journey deepened my understanding of testing, reinforcing the importance of TDD and fostering a passion for writing clean code."
 	},
 	// other project objects...
 ];
@@ -115,7 +119,7 @@ const projects: Array<{ title: string; desc: string; href: string; image: string
     <h2 class="title mb-4 text-xl">Projects</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       {
-        projects.map(({ title, desc, image, href, techUsed }) => (
+        projects.map(({ title, desc, image, href, techUsed, reflections }) => (
           <div class="border-2 border-gray-300 dark:border-gray-700 dark:bg-gray-800 overflow-hidden">
             <div class="aspect-w-16 aspect-h-9">
               <img 
@@ -136,6 +140,9 @@ const projects: Array<{ title: string; desc: string; href: string; image: string
                 </a>
               </h3>
               <p class="mt-2 text-sm text-black dark:text-white">{desc}</p>
+              <p class="mt-2 text-sm text-black dark:text-white">
+                <strong>Reflections: </strong> {reflections}
+              </p>
               <p class="mt-2 text-sm text-black dark:text-white">
                 <strong>Tech: </strong> {techUsed}
               </p>
